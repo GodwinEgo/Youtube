@@ -6,7 +6,8 @@ import {logo} from '../utils/constants'
 
 
 const Navbar = () => {
-  <Stack
+  return (
+    <Stack
     direction="row"
     alignItems="center"
     p={ 2 }
@@ -16,6 +17,7 @@ const Navbar = () => {
       <img src={logo} alt='logo' height={45}/>
     </Link>
  </Stack>
+)
 }
 
 export default Navbar
