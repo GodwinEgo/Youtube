@@ -11,8 +11,12 @@ const VideoCard = ({video: {id:{videoId}, snippet}}) =>
 {
   return (
     <Card>
-      <Link>
-        <CardMedia image={snippet?.thumbnails?.url} />
+      <Link to={videoId ? `/video/${videoId}` : demoVideoUrl}>
+        <CardMedia
+          image={ snippet?.thumbnails?.url }
+          alt={ snippet?.title }
+          sx={{width:358, height: 180}}
+        />
       </Link>
     </Card>
   )
