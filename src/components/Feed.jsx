@@ -42,7 +42,9 @@ const Feed = () =>
             Videos
           </span>
         </Typography>
-        <Videos  videos={videos} />
+
+        <Videos videos={ videos } />
+        
       </Box>
 
 
