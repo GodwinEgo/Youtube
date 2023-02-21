@@ -1,5 +1,5 @@
 import { CardContent, CardMedia, Link } from '@mui/material'
-import { Box, width } from '@mui/system'
+import { Box } from '@mui/system'
 import React from 'react'
 import { demoProfilePicture } from '../utils/constants'
 
