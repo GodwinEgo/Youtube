@@ -6,7 +6,10 @@ import { fetchFromAPI } from '../utils/fetchFromAPI'
 
 const ChannelDetail = () =>
 {
-  const [ chhannelDetail, setChannelDetail ] = useState( null )
+  const [ channelDetail, setChannelDetail ] = useState( null )
+
+  const [ videos, setVideos ] = useState( [] )
+
 
   const { id } = useParams();
 
@@ -16,8 +19,8 @@ const ChannelDetail = () =>
       .then( ( data ) => setChannelDetail( ( data?.items[ 0 ] ) ) )
 
 
-    fetchFromAPI( `search?channelId=${ id }&=snippet&order=data` )
-      .then( ( data ) => setChannelDetail( ( data?.items[ 0 ] ) ) )
+    fetchFromAPI( `search?channelId=${ id }&part=snippet&order=date` )
+      .then( ( data ) => setVideos( ( data?.items ) ) )
 
   }, [ id ] )
 
