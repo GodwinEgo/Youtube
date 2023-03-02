@@ -1,8 +1,9 @@
-import { CheckCircle } from '@mui/icons-material'
-import { CardContent, CardMedia, Link, Typography } from '@mui/material'
-import { Box } from '@mui/system'
 import React from 'react'
+import { CheckCircle } from '@mui/icons-material'
+import { CardContent, CardMedia, Typography } from '@mui/material'
+import { Box } from '@mui/system'
 import { demoProfilePicture } from '../utils/constants'
+import { Link } from 'react-router-dom'
 
 const ChannelCard = ( { channelDetail } ) =>
 {
@@ -16,7 +17,7 @@ const ChannelCard = ( { channelDetail } ) =>
         alignItems: 'center',
         width: { xs: '356px', md: '320px' },
         height: '326px',
-        margin: 'auto'
+        margin: 'auto',
       } }
     >
       <Link to={ `/channel/${ channelDetail?.id?.channelId }` }>
